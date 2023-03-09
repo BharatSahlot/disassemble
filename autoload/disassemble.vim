@@ -58,7 +58,7 @@ func disassemble#Disassemble(cmdmods, arg)
   if f == ''
     " If not present, then recursively search for an object file by adding
     " an .o extension
-    let objname = objname . '.o'
+    let objname = 'build/' . objname . '.o'
     let f = findfile(objname, '**')
     if f == ''
       call s:ErrorMsg("File '" . objname . "' is not found")
